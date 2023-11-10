@@ -1,26 +1,12 @@
-import { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
-import { AppBar } from '../components/AppBar'
-import Head from 'next/head'
-import { PingButton } from '../components/PingButton'
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import '@solana/wallet-adapter-react-ui/styles.css';
+import HomeButton from '../components/HomeButton';
 
-const Home: NextPage = (props) => {
-
+export default function Home() {
   return (
-    <div className={styles.App}>
-      <Head>
-        <title>Wallet-Adapter Example</title>
-        <meta
-          name="description"
-          content="Wallet-Adapter Example"
-        />
-      </Head>
-        <AppBar />
-        <div className={styles.AppBody}>
-          <PingButton/>
-        </div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+       {/* <HomeButton /> */}
+      <WalletMultiButton />
     </div>
   );
 }
-
-export default Home;
